@@ -13,5 +13,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author sesideva
  */
 public interface GaragemRepository extends JpaRepository<Veiculo, Long> {
-    List<Veiculo> findByMarcaIgnoreCase(String marca);
+    List<Veiculo> findByMarcaIgnoreCase(String marca);  
+    List<Veiculo> findByModeloIgnoreCase(String modelo);      
+    List<Veiculo> findByAno(int ano);
+    List<Veiculo> findByCorIgnoreCase(String cor);
 }
